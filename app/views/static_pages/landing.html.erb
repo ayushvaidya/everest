@@ -1,2 +1,67 @@
-<h1>StaticPages#landing</h1>
-<p>Find me in app/views/static_pages/landing.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Everest </title>
+    <%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+	<%= render 'layouts/shim' %>
+
+  </head>
+  <body>
+
+	<%= render 'layouts/header' %>
+<div class ="landing-background">
+
+
+
+	<div class ="landing-signup">
+		
+		<div class ="landing-signup-text"> New to Boost? Sign up 
+		</div>
+
+		<hr>
+
+		<div class ="landing-signup-form">
+	
+
+			<div class ="landing-signup-fullname">
+			</div>
+
+			<div class ="landing-signup-email">
+			</div>
+
+			<div class ="landing-signup-password">
+			</div>
+
+			<div class ="landing-signup-username">
+			</div>
+
+			<div class ="landing-signup-button"> Sign Up
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+  </body>
+</html>
+
+
+
