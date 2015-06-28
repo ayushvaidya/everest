@@ -1,0 +1,1162 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* sizing */
+
+$side: 190px;
+$margin: 20px;
+$square: 195px;
+
+
+/* color scheme */
+
+$primary-color: #ea2e49;
+
+$secondary-color: #77c4d3;
+
+$third-color: #1b1d25;
+
+$fourth-color: #333745;
+
+$light-gray: #F3F6F9;
+
+$medium-gray: rgb(32, 32, 32);
+
+$third-gray: #2b2b2b;
+
+$border-gray: #e1e3ef;
+
+/* Links */
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+a:link {
+    color: white;
+    text-decoration: none;
+
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+a:active {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* Fonts */
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('/assets/proximanova-light-webfont.eot');
+    src: url('/assets/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/proximanova-light-webfont.woff') format('woff'),
+         url('/assets/proximanova-light-webfont.ttf') format('truetype'),
+         url('/assets/proximanova-light-webfont.svg#/assets/ProximaNovaLight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('/assets/proximanova-lightitalic-webfont.eot');
+    src: url('/assets/proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/proximanova-lightitalic-webfont.woff') format('woff'),
+         url('/assets/proximanova-lightitalic-webfont.ttf') format('truetype'),
+         url('/assets/proximanova-lightitalic-webfont.svg#/assets/ProximaNovaLightItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+
+}
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('/assets/proximanova-reg-webfont.eot');
+    src: url('/assets/proximanova-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/proximanova-reg-webfont.woff') format('woff'),
+         url('/assets/proximanova-reg-webfont.ttf') format('truetype'),
+         url('/assets/proximanova-reg-webfont.svg#/assets/ProximaNovaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('/assets/proximanova-regitalic-webfont.eot');
+    src: url('/assets/proximanova-regitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/proximanova-regitalic-webfont.woff') format('woff'),
+         url('/assets/proximanova-regitalic-webfont.ttf') format('truetype'),
+         url('/assets/proximanova-regitalic-webfont.svg#/assets/ProximaNovaRegularItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('/assets/proximanova-sbold-webfont.eot');
+    src: url('/assets/proximanova-sbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/proximanova-sbold-webfont.woff') format('woff'),
+         url('/assets/proximanova-sbold-webfont.ttf') format('truetype'),
+         url('/assets/proximanova-sbold-webfont.svg#/assets/ProximaNovaSemibold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('/assets/proximanova-sbolditalic-webfont.eot');
+    src: url('/assets/proximanova-sbolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/proximanova-sbolditalic-webfont.woff') format('woff'),
+         url('/assets/proximanova-sbolditalic-webfont.ttf') format('truetype'),
+         url('/assets/proximanova-sbolditalic-webfont.svg#/assets/ProximaNovaSemiboldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('proxima_nova_black-webfont.eot');
+    src: url('proxima_nova_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proxima_nova_black-webfont.woff') format('woff'),
+         url('proxima_nova_black-webfont.ttf') format('truetype'),
+         url('proxima_nova_black-webfont.svg#/assets/ProximaNovaBlack') format('svg');
+    font-weight: 800;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('proxima_nova_extrabold-webfont.eot');
+    src: url('proxima_nova_extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proxima_nova_extrabold-webfont.woff') format('woff'),
+         url('proxima_nova_extrabold-webfont.ttf') format('truetype'),
+         url('proxima_nova_extrabold-webfont.svg#/assets/ProximaNovaExtrabold') format('svg');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+
+/* universal */
+
+body {
+
+  background-color: $light-gray;
+
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.glyphicon {
+	margin-right:15px;
+	color: $primary-color;
+}
+
+
+/* typography */
+
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+
+}
+
+h2 {
+  font-size: 11px;
+  color: $primary-color;
+  font-family: "proxima-nova";
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+
+h3 {
+  font-size: 16px;
+  font-family: "proxima-nova";
+  font-weight: normal;
+  margin: 0;
+}
+
+h4 {
+  font-size: 11px;
+  font-family: "proxima-nova";
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+
+
+}
+
+
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* Nav Bar */
+
+.logobox {
+	float: left;
+	width: $side;
+	height: 50px;
+	background-color: $primary-color;
+  position: relative;
+
+}
+
+
+
+.navbar {
+  min-height: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: white;
+}
+
+
+#logo {
+  font-family: "proxima-nova";
+  line-height:50px;
+  padding-left: 25px;
+  font-size: 40px;
+  color: white;
+  letter-spacing: -3px;
+  font-weight: 100;
+  margin: 0 auto;
+  display: block;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+/* Left Column */
+
+.leftCol {
+	background-color: $medium-gray;
+	float:left;
+	position:fixed;
+    left:0; top:0px; bottom: 0;
+    width: $side;
+
+
+    hr {
+  border-color: $third-gray;
+	margin-top:20px;
+	margin-bottom:20px;
+	height:1px;
+  z-index: 1000;
+}
+
+
+}
+
+.leftBox-profile {
+  width:32px;
+  height:32px;
+  border-radius: 5px;
+  background-color: $light-gray;
+  float:left;
+}
+
+.leftBox-profile-name {
+  width:100px;
+  height:32px;
+  line-height: 32px;
+  float: left;
+  margin-left: 13px;
+  color:white;
+
+}
+
+
+
+
+
+
+
+
+
+.leftBox3 {
+  font-family: "proxima-nova";
+  position:relative;
+    height: 32px;
+    width: $side;
+    margin-top:70px;
+    line-height:28px;
+    text-transform: uppercase;
+    padding-left: 25px;
+    font-size:11px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+      margin-bottom: 20px;
+}
+
+
+
+.leftBox {
+	font-family: "proxima-nova";
+	position:relative;
+    height: 28px;
+    width: $side;
+    margin-top:70px;
+    line-height:28px;
+    text-transform: uppercase;
+    padding-left: 25px;
+    font-size:11px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+
+}
+
+
+.leftBox2 {
+	font-family: "proxima-nova";
+	position:relative;
+    height: 28px;
+    width: $side;
+    margin-top:10px;
+    line-height:28px;
+    text-transform: uppercase;
+    padding-left: 25px;
+    font-size:11px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    color: white;
+}
+
+.leftBox2:hover {
+  background-color: $third-gray;
+  height:28px;
+  color: $primary-color;
+  transition: all .2s ease-in-out;
+}
+
+.leftBox2:active {
+  background-color: $third-gray;
+  height:28px;
+  color: $primary-color;
+  transition: all .2s ease-in-out;
+}
+
+
+
+
+.leftColsongimage {
+  width: 140px;
+  height: 120px;
+  background-color: $third-gray;
+  position: relative;
+margin-left: 25px;
+margin-bottom: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Right Column */
+
+.rightCol {
+	width: $side;
+	background-color: white;
+	float:right;
+	position:fixed;
+	right:0; top:0; bottom: 0;
+
+
+
+}
+
+.rightbox {
+  float: right;
+  width: $side;
+  height: 60px;
+  background-color: $secondary-color;
+
+}
+
+
+
+/* Center Column */
+
+.centerCol {
+  width: 840px;
+  height:1600px;
+  margin-left: 275px;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+/* Trending */
+
+
+.featurebox {
+	width: 100%;
+	height: 225px;
+	background-color: $medium-gray;
+	margin-bottom: $margin;
+
+
+}
+
+.songbox {
+	width: $square;
+	height: $square;
+	background-color: $medium-gray;
+	margin-right:$margin;
+	float: left;
+	margin-bottom: $margin;
+
+
+}
+
+.songboxb {
+	width: $square;
+	height: $square;
+	background-color: $medium-gray;
+	float: left;
+	margin-bottom: $margin;
+
+}
+
+/* Profile */
+.profile-head {
+  width:100%;
+  height:305px;
+  margin-bottom: $margin;
+}
+
+.profile-picture {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  background-color: $light-gray;
+  border-color: $border-gray;
+  border-width: 2px;
+  border-style: solid;
+  margin-top: 160px;
+  margin-left: 20px;
+}
+
+
+.coverpicture {
+  width: 100%;
+  height: 265px;
+  background-color: $secondary-color;
+  background-size: 100%;
+  background-position: 60% 50%;
+
+  background-image: url(http://static1.squarespace.com/static/5105d89ee4b0869f6416d903/53d96099e4b07de7100e7bea/53d96d8de4b080fb355071b9/1406758322203/chance-the-rapper.jpg)
+}
+
+
+.profile-menubar {
+  width: 100%;
+  height: 40px;
+  background-color: $medium-gray;
+  padding-left: 180px;
+
+
+}
+
+/* Song Player */
+
+.songplayer {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-bottom:50px;
+  border-style: solid;
+  border-color: $border-gray;
+  border-width: 1px 1px 1px 1px;
+
+
+}
+
+
+
+.songplayer-header {
+  width: 100%;
+  height: 40px;
+  background-color: $medium-gray;
+  font-family: "proxima-nova";
+  line-height:40px;
+  text-transform: uppercase;
+  font-size:11px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  color: white;
+    padding-left:20px;
+  
+  h5 {
+    color: $primary-color;
+    font-size: 13px;
+    font-family: "proxima-nova";
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    float: left;
+    line-height: 40px;
+    margin-right: 5px;
+}
+
+}
+
+.songplayer-header-type {
+  height: 100%;
+  position: relative;
+  margin-right: 20px;
+  float:left;
+  display: inline-block;
+
+}
+
+
+.songplayer-vr {
+  width: 1px;
+  height:100%;
+  background-color: $third-gray;
+  float: left;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+.playerinfo {
+  width: 100%;
+  height: 140px;
+  padding-top:15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-style: solid;
+  border-color: $border-gray;
+  border-width: 0px 0px 1px 0px;
+  background-color: $light-gray;
+}
+
+.songimage {
+  width: 130px;
+  height: 110px;
+  background-color: white;
+  float: left;
+  margin-right:20px;
+
+}
+
+.songinfo {
+  width: 450px;
+  height: 110px;
+  float: left;
+    margin-right:65px;
+    h4 {
+      margin-top: 6px;
+    }
+   h3 {
+      margin-top: 6px;
+    }
+}
+
+.buyinfo {
+  width: 130px;
+  height: 110px;
+  float: right;
+  position: relative;
+  h2 {
+    color: black;
+    line-height: 20px;
+    margin-top: 25px;
+  }
+}
+
+.buyinfo-button {
+  width:100%;
+  height:35px;
+  background-color: $primary-color;
+  border-radius: 5px;
+  bottom: 0;
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "proxima-nova";
+  line-height: 35px;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+
+.song-section {
+  overflow: auto;
+  width:100%;
+  height:300px;
+
+}
+
+
+
+
+
+
+
+.song {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border-color: $light-gray;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  float: left;
+  padding: 12px 20px 12px 20px;
+
+
+}
+
+
+.song-name {
+  font-family: "proxima-nova";
+  width:80%;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  font-size: 13px;
+
+
+}
+
+
+.song-add {
+  width:30px;
+  height: 30px;
+  background-color: $primary-color;
+  line-height: 30px;
+  float: right;
+  border-radius: 5px;
+  text-align: center;
+  .glyphicon {
+    color: white;
+    margin: 0px;
+    position: relative;
+    font-size: 11px;
+  }
+
+}
+
+
+
+/* Single Player */
+
+
+.singleplayer {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background-color: white;
+  padding-top:15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-color: $border-gray;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+    .glyphicon {
+      font-size: 2.3em;
+      float: left;
+    }
+  .progress {
+  float: left;
+  width: 100%;
+  height:3px;
+  margin: 0;
+  margin-top: 20px;
+    background-color: $fourth-color;
+
+}
+
+.progress-bar {
+  background-color: $primary-color;
+}
+
+.progress-bar-info {
+  background-color: $secondary-color;
+
+}
+
+
+
+}
+
+.single-songimage {
+  width: 110px;
+  height: 110px;
+  background-color: $light-gray;
+  float: left;
+  margin-right:15px;
+
+}
+
+.single-songinfo {
+  width: 570px;
+  height: 110px;
+  float: left;
+  line-height: 8px;
+
+
+}
+
+.single-songinfo-name {
+  width: 200px;
+  height: 40px;
+  float: left;
+}
+
+.single-songinfo-stats {
+  width: 300px;
+  height: 20px;
+  float: left;
+  line-height: 20px;  
+  margin-top: 20px;
+  font-family: "proxima-nova";
+  text-transform: uppercase;
+  font-size:12px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+
+
+
+  .glyphicon {
+    font-size: 12px;
+    color: $primary-color;
+    margin: 0;
+    line-height: 18px;
+    margin-right: 3px;
+  }
+}
+
+.single-play {
+  width: 50px;
+  height: 100%;
+  float: left;
+}
+
+.single-play2 {
+  width: 50px;
+  height: 100%;
+  float: left;
+  margin-left: 8px;
+}
+
+.singleplayer-rightCol {
+  width: 90px;
+  float:right;
+  position:relative;
+  
+}
+
+
+.singleplayer-genre {
+  width: 60px;
+  height: 20px;
+  background-color: #9b9b9b;
+  border-radius: 5px;
+  margin-top: 3px;
+    font-family: "proxima-nova";
+  font-size:11px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 20px;
+  color:white;
+}
+
+
+
+.singleplayer-time {
+  margin-top:31px;
+  font-family: "proxima-nova";
+  text-transform: uppercase;
+  font-size:11px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+/* Headers */
+
+.newsfeed-header {
+  width: 100%;
+  height: 40px;
+  background-color: $medium-gray;
+  font-family: "proxima-nova";
+  line-height:40px;
+  text-transform: uppercase;
+  padding-left: 25px;
+  font-size:11px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  color: white;
+
+}
+
+/* Inbox */
+
+.inbox {
+  width: 842px;
+  height: auto;
+  background-color: $light-gray;
+  font-family: "proxima-nova";
+  line-height:40px;;
+  font-size:11px;
+  position: fixed;
+    border-style:solid;
+  border-width: 1px 1px 1px 1px;
+  border-color:$border-gray;
+
+
+
+}
+
+
+.inbox-leftCol {
+  width: 300px;
+  height: auto;
+  font-family: "proxima-nova";
+  line-height:40px;
+  font-size:11px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  position: relative;
+    float:left;
+
+
+
+}
+
+.inbox-leftCol-top {
+  width: 100%;
+  height: 50px;
+  background-color: $light-gray;
+
+  border-color:$border-gray;
+
+}
+
+.privatebox {
+  width: 50%;
+  height: 100%;
+  background-color: $primary-color;
+  font-family: "proxima-nova";
+  line-height:50px;
+  font-size:13px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  float: left;
+  text-align: center;
+  color:white;
+
+}
+
+.openbox {
+  width: 50%;
+  height: 100%;
+  background-color: $medium-gray;
+  font-family: "proxima-nova";
+  line-height:50px;
+  font-size:13px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  float: left;
+  text-align: center;
+    color:white;
+}
+
+
+.inbox-leftCol-bottom {
+  width: 100%;
+  height: 360px;
+  overflow: auto;
+  overflow-x: hidden;
+
+}
+
+.messagebox {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-style:solid;
+  border-width: 0px 0px 1px 0px;
+  border-color:$light-gray;
+
+}
+
+
+
+.inbox-rightCol {
+  width: 540px;
+  height: 410px;
+  float:left;
+  position:relative;
+  background-color: white;
+
+}
+
+.inbox-rightCol-top {
+  width: 540px;
+  height: 50px;
+  background-color: white;
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+  border-color:$border-gray;
+
+}
+
+.inbox-rightCol-middle {
+  width: 540px;
+  height: 240px;
+  overflow: scroll;
+  overflow-x: hidden;
+
+}
+
+
+
+.newmessage {
+  width: 150px;
+  height: 50px;
+  background-color: $medium-gray;
+  font-family: "proxima-nova";
+  line-height:50px;
+  font-size:13px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  float: right;
+  text-align: center;
+  color:white;
+
+}
+
+
+.inbox-rightCol-bottom {
+  width: 100%;
+  height: 120px;
+  background-color: $light-gray;
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+  border-color:$border-gray;
+  position:absolute; 
+  bottom:0;
+  padding: 10px 15px 10px 15px;
+
+}
+
+.send-message {
+  width: 510px;
+  height: 100px;
+  background-color: white;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color:$border-gray;
+
+}
+
+
+/* Audio Player Bottom */
+
+
+.audioplayer-bottom {
+  width: 100%;
+  height: 60px;
+  background-color: $third-gray;
+  position:fixed; 
+  bottom:0;
+  padding-left: 25px;
+  z-index: 2000;
+  .progress {
+  float: left;
+  width: 540px;
+  height:3px;
+
+    background-color: $fourth-color;
+
+}
+
+.progress-bar {
+  background-color: $primary-color;
+}
+
+.progress-bar-info {
+  background-color: $secondary-color;
+
+}
+
+}
+
+
+.audioplayer-image {
+  width:35px;
+  height:35px;
+  border-radius: 5px;
+  background-color:$light-gray;
+  float: left;
+  margin: auto;
+  position: absolute;
+  top: 0;  bottom: 0; 
+
+}
+
+.audioplayer-info {
+  width:140px;
+  height:35px;
+  float: left;
+  margin: auto;
+  margin-left:50px;
+  color: $light-gray;
+  font-size: 11px;
+    position: absolute;
+  top: 0;  bottom: 0; 
+  line-height: 8px;
+
+}
+
+.audioplayer-play {
+  width:140px;
+  height:20px;
+  float: left;
+  margin: auto;
+  position: absolute;
+  top: 0;  bottom: 0;
+  margin-left:180px;
+  font-size: 1em;
+  .glyphicon {
+    color: $light-gray;
+  }
+
+}
+
+.audioplayer-length {
+  width:140px;
+  height:20px;
+  float: left;
+  margin: auto;
+  position: absolute;
+  top: 0;  bottom: 0;
+  margin-left:865px;
+  color: $light-gray;
+  font-size: 11px;
+  line-height: 20px;
+
+}
+
+
+
+
+.audioplayer-repeat {
+  width:140px;
+  height:20px;
+  float: left;
+  margin: auto;
+  position: absolute;
+  top: 0;  bottom: 0;
+  margin-left:970px;
+  font-size: 1em;
+  .glyphicon {
+    color: $light-gray;
+  }
+
+}
+
+.audioplayer-volume {
+  width:140px;
+  height:20px;
+  float: left;
+  margin: auto;
+  position: absolute;
+  top: 0;  bottom: 0;
+  margin-left:1060px;
+  font-size: 1.2em;
+  .glyphicon {
+    color: $light-gray;;
+  }
+
+}
+
+

@@ -1,0 +1,59 @@
+<div class = "leftCol">
+	    <div class = "logobox">
+    <%= link_to "", '#', id: "logo" %>
+   	</div>
+
+	<div class = "leftBox3">
+		<%= link_to profile_path do %>
+			<div class ="leftBox-profile"></div>
+		<% end %>
+
+		<div class ="leftBox-profile-name"> <%= link_to "Profile" , profile_path %></div>
+
+
+	</div>
+
+	<hr>
+
+	<%= link_to home_path do %>
+		<div class = "leftBox2"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>Home
+		</div>
+	<% end %>
+
+	<%= link_to home_path do %>
+		<div class = "leftBox2"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>Search
+		</div>
+	<% end %>
+
+	<%= link_to trending_path do %>
+		<div class = "leftBox2"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>Trending
+		</div>
+	<% end %>
+
+	<hr>
+
+	<%= link_to home_path do %>
+		<div class = "leftBox2"><span class="glyphicon glyphicon-expand" aria-hidden="true"></span>Playlists
+		</div>
+	<% end %>
+
+	<%= link_to home_path do %>
+		<div class = "leftBox2"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Favourites
+		</div>
+	<% end %>
+
+	<hr>
+
+	<%= link_to inbox_path do %>
+		<div class = "leftBox2"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>Inbox
+		</div>
+	<% end %>
+
+	<%= link_to inbox_path do %>
+		<div class = "leftBox2"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>Notifications</div>
+	<% end %>
+
+
+	<hr>
+
+</div>
