@@ -258,7 +258,7 @@ p {
     background-color: white;
     border-color: $border-gray;
     border-style: solid;
-    border-width: 0px 0px 1px 0px;
+    border-width: 0px 0px 1px
 }
 
 
@@ -266,9 +266,9 @@ p {
   font-family: "proxima-nova";
   line-height:50px;
   padding-left: 25px;
-  font-size: 40px;
+  font-size: 24px;
   color: white;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
   font-weight: 100;
   margin: 0 auto;
   display: block;
@@ -278,6 +278,21 @@ p {
   }
 }
 
+#logo2 {
+  font-family: "proxima-nova";
+  line-height:50px;
+  font-size: 20px;
+  color: white;
+  letter-spacing: -1px;
+  font-weight: 100;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
 
 .header-login-username {
   width: 130px;
@@ -553,6 +568,19 @@ margin-bottom: 20px;
   margin-left: 20px;
 }
 
+.profile-name {
+  width: 130px;
+  height: 40px;
+  position: absolute;
+  margin-top: 215px;
+  margin-left: 170px;
+  color:white;
+  font-size: 24px;
+  font-family: "proxima-nova";
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(0,0,0,.6);
+}
+
 
 .coverpicture {
   width: 100%;
@@ -560,8 +588,7 @@ margin-bottom: 20px;
   background-color: $secondary-color;
   background-size: 100%;
   background-position: 60% 50%;
-
-  background-image: url(http://static1.squarespace.com/static/5105d89ee4b0869f6416d903/53d96099e4b07de7100e7bea/53d96d8de4b080fb355071b9/1406758322203/chance-the-rapper.jpg)
+  background-color: $secondary-color;
 }
 
 
@@ -670,24 +697,33 @@ margin-bottom: 20px;
   width: 450px;
   height: 110px;
   float: left;
-    margin-right:65px;
+  margin-right:65px;
+  color: #666;
+  font-size: 12px;
+
     h4 {
       margin-top: 6px;
+      color:$medium-gray;
     }
-   h3 {
-      margin-top: 6px;
-    }
+
 }
+
+
+
+
 
 .buyinfo {
   width: 130px;
   height: 110px;
   float: right;
   position: relative;
+
   h2 {
-    color: black;
-    line-height: 20px;
-    margin-top: 25px;
+    font-size: 12px;
+    color: $medium-gray;
+    line-height: 22px;
+    margin-top: 21px;
+    text-transform: none;
   }
 }
 
@@ -719,9 +755,6 @@ margin-bottom: 20px;
 
 
 
-
-
-
 .song {
   width: 100%;
   height: 50px;
@@ -730,22 +763,44 @@ margin-bottom: 20px;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
   float: left;
-  padding: 12px 20px 12px 20px;
+  padding: 10px 20px 10px 20px;
 
 
 }
 
 
 .song-name {
-  font-family: "proxima-nova";
-  width:80%;
+
+  width:96%;
   height: 30px;
   line-height: 30px;
   float: left;
-  font-size: 13px;
+  font-size: 12px;
+  color: #888;
 
 
 }
+
+.song-name-image {
+  width:30px;
+  height: 30px;
+  background-color: $light-gray;
+  float: left;
+  margin-right: 10px;
+}
+
+.song-name-price {
+  font-size: 11px;
+  width:100px;
+  height:100%;
+  float:right;
+  color: #999;
+}
+
+
+
+
+
 
 
 .song-add {
@@ -783,7 +838,7 @@ margin-bottom: 20px;
   border-style: solid;
   border-width: 0px 1px 1px 1px;
     .glyphicon {
-      font-size: 2.3em;
+      font-size: 30px;
       float: left;
     }
   .progress {
@@ -792,7 +847,7 @@ margin-bottom: 20px;
   height:3px;
   margin: 0;
   margin-top: 20px;
-    background-color: $fourth-color;
+    background-color: $border-gray;
 
 }
 
@@ -831,6 +886,12 @@ margin-bottom: 20px;
   width: 200px;
   height: 40px;
   float: left;
+  line-height: 7px;
+  h4 {
+    color: #999;
+    font-weight: bold;
+    font-size: 11px;
+  }
 }
 
 .single-songinfo-stats {
@@ -841,7 +902,7 @@ margin-bottom: 20px;
   margin-top: 20px;
   font-family: "proxima-nova";
   text-transform: uppercase;
-  font-size:12px;
+  font-size:10px;
   font-weight: bold;
   letter-spacing: 0.3px;
   text-decoration: none;
@@ -849,11 +910,11 @@ margin-bottom: 20px;
 
 
   .glyphicon {
-    font-size: 12px;
-    color: $primary-color;
+    font-size: 11px;
+    color: #999;
     margin: 0;
     line-height: 18px;
-    margin-right: 3px;
+    margin-right: 4px;
   }
 }
 
@@ -861,6 +922,8 @@ margin-bottom: 20px;
   width: 50px;
   height: 100%;
   float: left;
+  color: #999;
+  font-weight: normal;
 }
 
 .single-play2 {
@@ -868,6 +931,9 @@ margin-bottom: 20px;
   height: 100%;
   float: left;
   margin-left: 8px;
+  color: #999;
+  font-weight: normal;
+
 }
 
 .singleplayer-rightCol {
@@ -881,7 +947,7 @@ margin-bottom: 20px;
 .singleplayer-genre {
   width: 60px;
   height: 20px;
-  background-color: #9b9b9b;
+  background-color: #999;
   border-radius: 5px;
   margin-top: 3px;
     font-family: "proxima-nova";
@@ -897,10 +963,10 @@ margin-bottom: 20px;
 
 
 .singleplayer-time {
-  margin-top:31px;
+  margin-top:32px;
   font-family: "proxima-nova";
   text-transform: uppercase;
-  font-size:11px;
+  font-size:10px;
   font-weight: bold;
   letter-spacing: 0.3px;
   text-decoration: none;
@@ -1107,12 +1173,16 @@ margin-bottom: 20px;
   bottom:0;
   padding-left: 25px;
   z-index: 2000;
+
   .progress {
   float: left;
   width: 540px;
   height:3px;
-
-    background-color: $fourth-color;
+  margin: auto;
+  position: absolute;
+  top: 0;  bottom: 0; 
+  margin-left:310px;
+  background-color: $medium-gray;
 
 }
 
@@ -1213,6 +1283,26 @@ margin-bottom: 20px;
   .glyphicon {
     color: $light-gray;;
   }
+    .progress {
+  float: left;
+  width: 100px;
+  height:3px;
+  margin: auto;
+  position: absolute;
+  top: 0;  bottom: 0; 
+  margin-left: 30px;
+  background-color: $medium-gray;
+
+}
+
+.progress-bar {
+  background-color: $secondary-color;
+}
+
+.progress-bar-info {
+  background-color: $secondary-color;
+
+}
 
 }
 
