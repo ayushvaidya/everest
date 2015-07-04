@@ -1,6 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Box Shadows */
+
+$level1: 0px 1px 3px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+$level2: 0px 3px 6px rgba(0,0,0,0.16), 0px 3px 6px rgba(0,0,0,0.23);
+$level3: 0px 10px 20px rgba(0,0,0,0.19), 0px 6px 6px rgba(0,0,0,0.23);
+$level4: 0px 14px 28px rgba(0,0,0,0.25), 0px 10px 10px rgba(0,0,0,0.22);
+$level5: 0px 19px 38px rgba(0,0,0,0.30), 0px 15px 12px rgba(0,0,0,0.22);
+
+
 
 /* sizing */
 
@@ -28,32 +37,34 @@ $third-gray: #2b2b2b;
 $border-gray: #e1e3ef;
 
 /* Links */
-
 a {
-    color: white;
-    text-decoration: none;
+
+  text-decoration: none;
 }
 
 
-a:link {
-    color: white;
-    text-decoration: none;
+
+
+/* Button Class */
+.button-class {
+  &:focus {
+    border: rgba(0,0,0,0) solid 1px;
+    outline: rgba(0,0,0,0) 0;
+  }
+  &:active { 
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    background-color: #b0281a;
+    background-image: -webkit-linear-gradient(top,#dd4b39,#b0281a);
+    border-top: 1px solid #992a1b;
+  }
 
 }
 
-a:visited {
-    text-decoration: none;
-}
 
-a:hover {
-    color: $primary-color;
-    text-decoration: none;
-}
 
-a:active {
-    color: $primary-color;
-    text-decoration: none;
-}
+
+
+
 
 
 
@@ -259,6 +270,33 @@ p {
     border-color: $border-gray;
     border-style: solid;
     border-width: 0px 0px 1px
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+a:link {
+    color: white;
+    text-decoration: none;
+
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+a:active {
+    color: $primary-color;
+    text-decoration: none;
+}
+
 }
 
 
@@ -349,6 +387,8 @@ p {
 	position:fixed;
     left:0; top:0px; bottom: 0;
     width: $side;
+    box-shadow:  $level3; 
+
 
 
     hr {
@@ -525,6 +565,7 @@ margin-bottom: 20px;
 	height: 225px;
 	background-color: $medium-gray;
 	margin-bottom: $margin;
+  box-shadow: $level1;
 
 
 }
@@ -536,6 +577,8 @@ margin-bottom: 20px;
 	margin-right:$margin;
 	float: left;
 	margin-bottom: $margin;
+  box-shadow: $level1;
+
 
 
 }
@@ -546,6 +589,8 @@ margin-bottom: 20px;
 	background-color: $medium-gray;
 	float: left;
 	margin-bottom: $margin;
+  box-shadow: $level1;
+
 
 }
 
@@ -554,6 +599,7 @@ margin-bottom: 20px;
   width:100%;
   height:305px;
   margin-bottom: $margin;
+    box-shadow: $level1;
 }
 
 .profile-picture {
@@ -566,6 +612,7 @@ margin-bottom: 20px;
   border-style: solid;
   margin-top: 160px;
   margin-left: 20px;
+  box-shadow: $level1;
 }
 
 .profile-name {
@@ -578,7 +625,7 @@ margin-bottom: 20px;
   font-size: 24px;
   font-family: "proxima-nova";
   font-weight: bold;
-  text-shadow: 0 0 3px rgba(0,0,0,.6);
+  text-shadow: $level1;
 }
 
 
@@ -589,6 +636,8 @@ margin-bottom: 20px;
   background-size: 100%;
   background-position: 60% 50%;
   background-color: $secondary-color;
+
+
 }
 
 
@@ -605,12 +654,11 @@ margin-bottom: 20px;
 
 .songplayer {
   width: 100%;
-  height: auto;
+  height: 480px;
   background-color: white;
   margin-bottom:50px;
-  border-style: solid;
-  border-color: $border-gray;
-  border-width: 1px 1px 1px 1px;
+  box-shadow: $level1;
+
 
 
 }
@@ -824,6 +872,23 @@ margin-bottom: 20px;
 
 /* Single Player */
 
+.post-section {
+  width:100%;
+  height:auto;
+  margin-bottom: $margin;
+    box-shadow: $level1;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 .singleplayer {
   position: relative;
@@ -836,7 +901,7 @@ margin-bottom: 20px;
   padding-right: 20px;
   border-color: $border-gray;
   border-style: solid;
-  border-width: 0px 1px 1px 1px;
+  border-width: 0px 0px 1px 0px;
     .glyphicon {
       font-size: 30px;
       float: left;
@@ -1006,10 +1071,8 @@ margin-bottom: 20px;
   line-height:40px;;
   font-size:11px;
   position: fixed;
-    border-style:solid;
-  border-width: 1px 1px 1px 1px;
-  border-color:$border-gray;
 
+  box-shadow: $level1;
 
 
 }
